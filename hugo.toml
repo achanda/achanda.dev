@@ -1,0 +1,57 @@
+baseURL = 'https://achanda.dev/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'typo'
+
+[params]
+# Appearance
+theme = 'auto'
+
+# Intro on main page, content in markdown, if you omit title or content the other can be displayed
+homeIntroTitle = 'Hello stranger!'
+homeIntroContent = """
+Hi! I am Abhishek (he/him). My interests are in Distributed systems and Infrastructure engineering.
+I currently work as a staff engineer at Cloudflare, working on providing Postgres as a platform for internal teams.
+"""
+
+# Collection to display on home page: 
+# in this case we would display content/posts pages
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Pagination size across all website, this is the same for homepage and single list page
+paginationSize = 100
+# Display summaries under post list entries
+listSummaries = true
+# List entries date format
+listDateFormat = '2 Jan 2006'
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/abhichanda/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/achanda"
+
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/rony358"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+# Syntax highlight on code blocks, all styles: 
+# https://xyproto.github.io/splash/docs/all.html
+# I suggest algol
+[markup]
+[markup.highlight]
+style = 'algol'
+
