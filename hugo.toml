@@ -1,6 +1,6 @@
 baseURL = 'https://achanda.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Abhishek Chanda'
 theme = 'typo'
 
 [params]
