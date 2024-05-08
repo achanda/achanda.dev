@@ -3,6 +3,22 @@ languageCode = 'en-us'
 title = 'Abhishek Chanda'
 theme = 'typo'
 
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
+
 [params]
 # Appearance
 theme = 'auto'
@@ -22,7 +38,7 @@ homeCollection = 'posts'
 # Pagination size across all website, this is the same for homepage and single list page
 paginationSize = 100
 # Display summaries under post list entries
-listSummaries = true
+listSummaries = false
 # List entries date format
 listDateFormat = '2 Jan 2006'
 
@@ -47,11 +63,4 @@ url = "/"
 [[params.menu]]
 name = "posts"
 url = "/posts"
-
-# Syntax highlight on code blocks, all styles: 
-# https://xyproto.github.io/splash/docs/all.html
-# I suggest algol
-[markup]
-[markup.highlight]
-style = 'algol'
 
