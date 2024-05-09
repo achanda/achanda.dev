@@ -32,7 +32,7 @@ drwxr-xr-x   7 root root  4096 Apr 20 06:56 src
        0.000777146 seconds time elapsed
 ```
 
-This tells me that the `ls` command consumed 0.03 Joules of energy and ran for 0.00078 seconds. I needed to get similar data for a C function that moght be surrounded by code that I do not need to measure. Something like this:
+This tells me that the `ls` command consumed 0.03 Joules of energy and ran for 0.00078 seconds. I needed to get similar data for a C function that might be surrounded by code that I do not need to measure. Something like this:
 
 ```
 start_measurement();
@@ -44,7 +44,7 @@ function_call_two();
 end_measurement();
 ```
 
-Here the two function calls need to be in the same translation unit, so I cannot seperate them and then use the perf tool to measure energy consumption.
+Here the two function calls need to be in the same translation unit, so I cannot separate them and then use the perf tool to measure energy consumption.
 
 I started with looking at the source code for [perf-stat](https://github.com/torvalds/linux/blob/dccb07f2914cdab2ac3a5b6c98406f765acab803/tools/perf/builtin-stat.c) but I was lost! This command takes in a whole bunch of options, the code was hard to follow. I googled `How perf works` and found Julia Evans' [blog post](https://jvns.ca/blog/2016/03/12/how-does-perf-work-and-some-questions/) titled exactly that. That post pointed me to the system call [perf_event_open](https://man7.org/linux/man-pages/man2/perf_event_open.2.html). The man page has an example code at the end which gets total number of instructions executed for a printf call, while that is useful I still do not know what particular parameters I need to use to get energy info. At this point I decided to `strace` the `perf stat` command to see how it was using `perf_event_open`.
 
