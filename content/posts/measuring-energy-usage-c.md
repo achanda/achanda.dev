@@ -1,7 +1,7 @@
 +++
 title = 'Measuring energy usage of a function in C'
 date = 2024-05-07T16:43:04-05:00
-draft = true
+draft = false
 +++
 
 
@@ -116,14 +116,14 @@ int main() {
     attr.size = sizeof(struct perf_event_attr);
     attr.config = config;
 
-    // Open the perf event
+    // Open the event
     long fd = syscall(PERF_EVENT_OPEN_SYSCALL_NR, &attr, -1, 0, -1, 0);
     if (fd == -1) {
         perror("perf_event_open");
         return 1;
     }
 
-    // Read the initial counter value
+    // Read initial counter value
     long int counter_before;
     if (read(fd, &counter_before, sizeof(long int)) != sizeof(long int)) {
         perror("read");
@@ -131,7 +131,6 @@ int main() {
         return 1;
     }
 
-    // Wait for 10 seconds
     printf("Measuring energy usage for 10 seconds...\n");
     sleep(10);
 
@@ -143,12 +142,12 @@ int main() {
         return 1;
     }
 
-    // Calculate the energy usage
+    // Calculate energy usage
     double scale = 2.3283064365386962890625e-10; // from energy-cores.scale
     double energy = (counter_after - counter_before) * scale;
     printf("Energy usage: %.9f Joules\n", energy);
 
-    // Close the perf event
+    // Close the event
     close(fd);
     return 0;
 }

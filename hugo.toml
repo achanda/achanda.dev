@@ -16,7 +16,7 @@ theme = 'typo'
     lineNumbersInTable = true
     noClasses = true
     noHl = false
-    style = 'monokai'
+    style = 'abap'
     tabWidth = 4
 
 [params]
