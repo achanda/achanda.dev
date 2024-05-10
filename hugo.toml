@@ -24,7 +24,7 @@ theme = 'typo'
 theme = 'auto'
 
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
-homeIntroTitle = 'Hello stranger!'
+homeIntroTitle = 'Hello!'
 homeIntroContent = """
 Hi! I am Abhishek (he/him). My interests are in Distributed systems and Infrastructure engineering.
 I currently work as a staff engineer at Cloudflare, working on providing Postgres as a platform for internal teams.
