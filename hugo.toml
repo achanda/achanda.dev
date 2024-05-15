@@ -21,7 +21,7 @@ theme = 'typo'
 
 [params]
 # Appearance
-theme = 'auto'
+theme = 'light'
 
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
 homeIntroTitle = 'Hello!'
