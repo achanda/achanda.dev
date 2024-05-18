@@ -2,6 +2,7 @@
 title = 'Measuring energy usage of a function in C'
 date = 2024-05-07T16:43:04-05:00
 draft = false
+readTime = true
 +++
 
 

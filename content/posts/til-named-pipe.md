@@ -2,6 +2,7 @@
 title = 'TIL: Getting the current capacity of a named pipe in Linux'
 date = 2024-05-17T21:43:58-05:00
 draft = false
+readTime = true
 +++
 
 A named pipe (also known as FIFO) is a IPC channel, it allows one process to write and another to read. Like all things

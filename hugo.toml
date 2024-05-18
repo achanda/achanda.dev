@@ -66,4 +66,4 @@ url = "/"
 [[params.menu]]
 name = "posts"
 url = "/posts"
-
+breadcrumbs = true
