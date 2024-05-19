@@ -26,7 +26,7 @@ theme = 'light'
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
 homeIntroTitle = 'Hello!'
 homeIntroContent = """
-I am Abhishek (he/him). I have wore many hats in the past, I have worked as a researcher, a software engineer, an SRE, 
+I am Abhishek (he/him). I have wore many hats in the past, I have been a published author, a researcher, a software engineer, an SRE, 
 a tech lead, a people manager. My current role is a staff engineer at Cloudflare where I am a part of the Postgres team. 
 We provide Postgres as a managed service for Cloudflare. On any average day, we support up to 20% of the whole Internet’s traffic.
 
