@@ -161,3 +161,5 @@ $ cc perf.c && sudo ./a.out
 Measuring energy usage for 10 seconds...
 Energy usage: 10.955932617 Joules
 ```
+
+So the `sleep(10)` call consumes about 11 Joules in 10 seconds. That amounts to 1.1 Watts, since 1 Watt is 1 Joule per second.
