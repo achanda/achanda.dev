@@ -13,14 +13,15 @@ Pipes on Linux have a limited size, typically set to 65536 bytes on modern syste
 The relevant section in https://man7.org/linux/man-pages/man7/pipe.7.html reads
 
 ```
-The following ioctl(2) operation, which can be applied to a file descriptor that refers to 
-either end of a pipe, places a count of the number of unread bytes in the pipe in the int 
-buffer pointed to by the final argument of the call:
+The following ioctl(2) operation, which can be applied to a file 
+descriptor that refers to  either end of a pipe, places a count 
+of the number of unread bytes in the pipe in the int buffer 
+pointed to by the final argument of the call:
 
 ioctl(fd, FIONREAD, &nbytes);
 
-The FIONREAD operation is not specified in any standard, but is provided on many
-implementations.
+The FIONREAD operation is not specified in any standard, but is 
+provided on many implementations.
 ```
 
 We assume that the name of the pipe is already known, and the reader and writer are active. The resulting python code looks like this:
