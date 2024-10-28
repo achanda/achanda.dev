@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Abhishek Chanda'
 theme = 'typo'
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [markup]
   [markup.highlight]
     anchorLineNos = false
