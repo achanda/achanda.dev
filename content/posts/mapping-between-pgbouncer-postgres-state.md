@@ -2,6 +2,8 @@
 title = 'Mapping Between Pgbouncer and Postgres Connection States'
 date = 2024-10-27T11:21:48-05:00
 draft = false
+readTime = true
+tags = ['postgres','pgbouncer']
 +++
 
 Pgbouncer is a popular connection pooler for Postgres. Connections from the end user to pgbouncer 
