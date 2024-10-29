@@ -1,6 +1,6 @@
 baseURL = 'https://achanda.dev/'
 languageCode = 'en-us'
-title = 'Abhishek Chanda'
+title = 'A blog'
 theme = 'typo'
 
 [markup.goldmark.renderer]
@@ -34,6 +34,8 @@ unsafe = true
 [params]
 # Appearance
 theme = 'light'
+
+author = 'Abhishek Chanda'
 
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
 homeIntroTitle = 'Hello!'
