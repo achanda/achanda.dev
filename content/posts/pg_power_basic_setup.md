@@ -140,3 +140,7 @@ abhishek@guest:~$ /usr/lib/postgresql/14/bin/postgres --config-file=$(pwd)/pgdat
 
 Note that powercap records the energy usage of the whole system, so each measurement will include all background
 processes. But since the background noise should be same for both measurements, those should cancel out when subtracted.
+
+> [!CAUTION]
+> Do not grant the postgres binary extra capabilities in production, or anywhere near production. This opens up the door
+> to a wide range of vulnerabilities.
