@@ -15,7 +15,7 @@ through documentation I realized that there is no way for a client to  log the T
 was to add that support and try to get that accepted upstream in postgres. Once I understood how this could be implemented, this
 became my side quest.
 
-This [patch](https://github.com/achanda/postgres/commit/2da74d8d6400975bf73fb0df97c3943ad3ed9a36) was merged on 3rd April 2025. 
+This [patch](https://github.com/postgres/postgres/commit/2da74d8d6400975bf73fb0df97c3943ad3ed9a36) was merged on 3rd April 2025. 
 This allows a client to pass in a file name where psql will dump encryption secrets. Here is how to use it
 
 ```
