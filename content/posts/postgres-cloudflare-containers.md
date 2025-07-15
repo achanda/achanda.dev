@@ -13,17 +13,17 @@ applications with workers. To use this, an user would need to define an applicat
 container platform.
 
 I decided to use Postgrest in the front as a REST API and to use that API from my worker. My dockerfile
-installs and starts both Postgres and Postgrest, it looks like this ![dockerfile](../../static/dockerfile.png)
+installs and starts both Postgres and Postgrest, it looks like this ![dockerfile](/dockerfile.png)
 
 The container runs a shell script that installs Postgrest and waits for Postgres to start, it looks like this
-![startsh](../../static/startsh.png)
+![startsh](/startsh.png)
 
-Postgrest is configured to connect to postgres on localhost on port 5432, and listens on port 3000 ![postgrestconf](../../static/postgrestconf.png)
+Postgrest is configured to connect to postgres on localhost on port 5432, and listens on port 3000 ![postgrestconf](/postgrestconf.png)
 
-The final piece is the actual worker, which is a HonoJS app and simply calls out to postgrest on port 3000. This is an example request ![request](../../static/request.png)
+The final piece is the actual worker, which is a HonoJS app and simply calls out to postgrest on port 3000. This is an example request ![request](/request.png)
 
 To deploy this, clone the repo https://github.com/achanda/cloudflare-postgres-containers, cd to the target directory and use wrangler to deploy. Once the api is up
-access it using curl ![curl](../../static/api.png)
+access it using curl ![curl](/api.png)
 
 Note that it might take a while for the container to start, the api will return an error while that happens. Once the container is up then subsequent requests
 should be instantaneous.
